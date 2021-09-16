@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
 import { VehicleSearchComponent } from './vehicle-search/vehicle-search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { VehicleSearchComponent } from './vehicle-search/vehicle-search.componen
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
