@@ -4,7 +4,7 @@ import { VehiclesService } from './services/vehicles.service';
 import { Observable, of } from 'rxjs';
 import { Vehicle } from './models/vehicle';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import {VehicleSearchComponent} from './vehicle-search/vehicle-search.component';
+import {VehicleSearchComponent} from './vehicle-search-form/vehicle-search.component';
 
 class MockVehicleService {
   vehicles = [];
@@ -37,7 +37,7 @@ describe('AppComponent', () => {
   });
 
   it('should render vehicle search component', () => {
-    const searchFormEl = fixture.nativeElement.querySelector('app-vehicle-search');
+    const searchFormEl = fixture.nativeElement.querySelector('app-vehicle-search-form');
     expect(searchFormEl).not.toBeNull();
   });
 

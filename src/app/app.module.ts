@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
-import { VehicleSearchComponent } from './vehicle-search/vehicle-search.component';
+import { VehicleSearchComponent } from './vehicle-search-form/vehicle-search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
+import { VehicleFilterFormComponent } from './vehicle-filter-form/vehicle-filter-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './shared/header/header.component';
     VehicleListComponent,
     VehicleDetailComponent,
     VehicleSearchComponent,
-    HeaderComponent
+    HeaderComponent,
+    VehicleFilterFormComponent
   ],
   imports: [
     BrowserModule,
