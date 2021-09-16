@@ -1,31 +1,44 @@
-import { TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { VehiclesService } from './services/vehicles.service';
+import { Observable, of } from 'rxjs';
+import { Vehicle } from './models/vehicle';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import {VehicleSearchComponent} from './vehicle-search/vehicle-search.component';
+
+class MockVehicleService {
+  vehicles = [];
+
+  getAll(): Observable<Vehicle[]> {
+    return of(this.vehicles);
+  }
+}
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, VehicleListComponent, VehicleSearchComponent
       ],
-    }).compileComponents();
-  });
+      providers: [
+        { provide: VehiclesService, useClass: MockVehicleService }
+      ]
+    });
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+  }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'carDealer-client'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('carDealer-client');
+  it('should render vehicle search component', () => {
+    const searchFormEl = fixture.nativeElement.querySelector('app-vehicle-search');
+    expect(searchFormEl).not.toBeNull();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('carDealer-client app is running!');
-  });
 });
