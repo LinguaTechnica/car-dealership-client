@@ -6,4 +6,5 @@ export class Vehicle {
   models?: Vehicle[];
   year: number;
   color: VehicleColor;
+  image?: string;
 }

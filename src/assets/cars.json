@@ -4,34 +4,39 @@
     "name": "Tesla",
     "models": ["Y"],
     "year": 2017,
-    "color": "red"
+    "color": "red",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": "2",
     "name": "Ford",
     "models": ["E150"],
     "year": 2021,
-    "color": "black"
+    "color": "black",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": "3",
     "name": "Honda",
     "models": ["Civic", "Accord"],
     "year": 2005,
-    "color": "white"
+    "color": "white",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": "4",
     "name": "BMW",
     "models": ["E series", "S series"],
     "year": 2021,
-    "color": "silver"
+    "color": "silver",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": "5",
     "name": "Volkswagen",
     "models": ["Passat", "Golf"],
     "year": 2021,
-    "color": "black"
+    "color": "black",
+    "image": "https://via.placeholder.com/150"
   }
 ]
