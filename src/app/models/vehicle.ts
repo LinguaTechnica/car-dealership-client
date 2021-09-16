@@ -2,8 +2,8 @@ import { VehicleColor } from '../common/vehicle-colors.enum';
 
 export class Vehicle {
   id: string;
-  name: string;
-  models?: Vehicle[];
+  manufacturer: string;
+  model?: string;
   year: number;
   color: VehicleColor;
   image?: string;

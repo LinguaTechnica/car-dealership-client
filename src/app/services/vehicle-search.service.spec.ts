@@ -38,7 +38,7 @@ describe('VehicleSearchService', () => {
   it('should return keyword search results', () => {
     const expected: Vehicle[] = [vehicle];
 
-    service.getQueryResults(vehicle.name).subscribe(results => {
+    service.getQueryResults(vehicle.manufacturer).subscribe(results => {
       expect(results).toEqual(expected);
     });
 
@@ -48,6 +48,6 @@ describe('VehicleSearchService', () => {
 function createVehicle(name: string = 'Test Vehicle'): Vehicle {
   const vehicle = new Vehicle();
   vehicle.id = '1a';
-  vehicle.name = name;
+  vehicle.manufacturer = name;
   return vehicle;
 }

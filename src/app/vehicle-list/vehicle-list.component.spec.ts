@@ -35,6 +35,6 @@ describe('VehicleListComponent', () => {
 function createVehicle(name: string = 'Vehicle Name'): Vehicle {
   const vehicle = new Vehicle();
   vehicle.id = '123abc';
-  vehicle.name = name;
+  vehicle.manufacturer = name;
   return vehicle;
 }
