@@ -1,3 +1,13 @@
-<form class="vehicleSearch">
+<div class="vehicleSearch">
+  <form class="mb-3" [formGroup]="searchForm" (ngSubmit)="search()">
+    <label for="searchQuery" class="form-label">Search</label>
+    <input type="text" id="searchQuery" class="form-control" formControlName="query" placeholder="Search">
+    <button class="btn btn-primary">Search</button>
 
-</form>
+    <div id="queryAlert" *ngIf="getAlert()">
+      {{ getAlert() }}
+    </div>
+
+  </form>
+</div>
+
