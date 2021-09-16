@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Vehicle } from '../models/vehicle';
 import { environment as config } from '../../environments/environment';
 
-const vehiclesUrl = config.apiVehicleUrl;
+export const vehiclesUrl = config.apiVehicleUrl;
 
 @Injectable({
   providedIn: 'root'
