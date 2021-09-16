@@ -1,6 +1,7 @@
 h1 {
   display: inline-block;
   font-family: 'Dosis', sans-serif;
+  font-weight: bold;
   font-size: 64px;
   color: #D64045
 }
@@ -8,7 +9,6 @@ h1 {
 .pageHeader {
   text-align: center;
   padding: 2em;
-  background-color: lightgray;
 }
 
 #headerLogo img {
