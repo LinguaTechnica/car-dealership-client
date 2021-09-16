@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VehiclesService } from './vehicles.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'carDealer-client';
+  title = 'Auto Galaxy';
+  vehicles = [];
+
+  constructor(private vehicleService: VehiclesService) {
+    this.vehicleService.getAll().subscribe(vehicles => this.vehicles = vehicles);
+  }
 }
