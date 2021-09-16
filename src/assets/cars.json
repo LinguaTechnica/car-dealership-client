@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Tesla",
+    "models": ["Y"],
+    "year": 2017,
+    "color": "red"
+  },
+  {
+    "id": "2",
+    "name": "Ford",
+    "models": ["E150"],
+    "year": 2021,
+    "color": "black"
+  },
+  {
+    "id": "3",
+    "name": "Honda",
+    "models": ["Civic", "Accord"],
+    "year": 2005,
+    "color": "white"
+  },
+  {
+    "id": "4",
+    "name": "BMW",
+    "models": ["E series", "S series"],
+    "year": 2021,
+    "color": "silver"
+  },
+  {
+    "id": "5",
+    "name": "Volkswagen",
+    "models": ["Passat", "Golf"],
+    "year": 2021,
+    "color": "black"
+  }
+]
