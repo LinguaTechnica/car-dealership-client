@@ -17,6 +17,7 @@ class MockVehicleService {
 describe('VehicleSearchService', () => {
   let service: VehicleSearchService;
   let httpTestingController: HttpTestingController;
+  let vehicle: Vehicle;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -27,6 +28,7 @@ describe('VehicleSearchService', () => {
     });
     service = TestBed.inject(VehicleSearchService);
     httpTestingController = TestBed.inject(HttpTestingController);
+    vehicle = createVehicle();
   });
 
   it('should be created', () => {
@@ -34,9 +36,9 @@ describe('VehicleSearchService', () => {
   });
 
   it('should return keyword search results', () => {
-    const expected: Vehicle[] = [createVehicle()];
+    const expected: Vehicle[] = [vehicle];
 
-    service.getQueryResults('Test Vehicle').subscribe(results => {
+    service.getQueryResults(vehicle.name).subscribe(results => {
       expect(results).toEqual(expected);
     });
 
