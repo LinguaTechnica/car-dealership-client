@@ -1,6 +1,7 @@
 <div class="container">
   <app-header [title]="title"></app-header>
   <app-vehicle-search></app-vehicle-search>
+
   <div class="row">
     <div class="col-8">
       <app-vehicle-list [vehicles]="vehicles"></app-vehicle-list>
@@ -9,4 +10,5 @@
       <app-vehicle-filter-form [vehicles]="vehicles" (filterEvent)="handleFilterResults($event)"></app-vehicle-filter-form>
     </div>
   </div>
+
 </div>

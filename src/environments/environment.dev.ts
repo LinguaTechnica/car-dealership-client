@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiVehicleUrl: '../assets/cars.json'
+  apiVehicleUrl: 'http://localhost:5000/api/vehicles'
 };
 
 /*

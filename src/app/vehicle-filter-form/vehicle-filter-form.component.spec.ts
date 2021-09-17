@@ -59,4 +59,15 @@ describe('VehicleFilterFormComponent', () => {
     buttonEl.click();
     expect(component.emitResults).toHaveBeenCalled();
   });
+
+  it('should render unique list of manufacturers', () => {
+    component.vehicles = vehicles;
+    component.initializeManufacturers();
+    fixture.detectChanges();
+
+    const manufacturerOptionsEls = fixture.nativeElement.querySelectorAll('.manufacturerOption');
+
+    expect(component.vehicles.length).toEqual(10);
+    expect(manufacturerOptionsEls.length).toEqual(5);
+  });
 });

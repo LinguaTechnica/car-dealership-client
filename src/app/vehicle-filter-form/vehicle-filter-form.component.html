@@ -1,9 +1,10 @@
 <div class="vehicleFilters">
   <form [formGroup]="filterForm" (ngSubmit)="emitResults()">
+
     <div class="form-group">
       <label for="manufacturer" class="form-label mt-4">Manufacturer:</label>
       <select class="form-select" id="manufacturer" formControlName="manufacturer" (change)="findManufacturer()">
-        <option *ngFor="let manufacturer of initializeManufacturers()" [ngValue]="manufacturer">{{ manufacturer }}</option>
+        <option class="manufacturerOption" *ngFor="let manufacturer of initializeManufacturers()" [ngValue]="manufacturer">{{ manufacturer }}</option>
       </select>
     </div>
 
