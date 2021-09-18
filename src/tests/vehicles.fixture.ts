@@ -43,7 +43,7 @@ export const vehicles = [
     id: '1a',
     manufacturer: 'Tesla',
     model: 'Model 3',
-    year: 2017,
+    year: 2019,
     color: 'red',
     image: 'https://via.placeholder.com/150'
   },

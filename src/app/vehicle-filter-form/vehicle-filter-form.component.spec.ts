@@ -70,4 +70,28 @@ describe('VehicleFilterFormComponent', () => {
     expect(component.vehicles.length).toEqual(10);
     expect(manufacturerOptionsEls.length).toEqual(5);
   });
+
+  it('should get unique list of models when filtered on manufacturer', () => {
+    component.vehicles = vehicles;
+    component.filterForm.controls.manufacturer.setValue('Tesla');
+    component.findManufacturer();
+    fixture.detectChanges();
+
+    const modelOptionsEls = fixture.nativeElement.querySelectorAll('.modelOption');
+
+    expect(component.vehicles.length).toEqual(10, 'Vehicles length');
+    expect(modelOptionsEls.length).toEqual(2, 'Model options');
+  });
+
+  it('should get unique list of years when filtered on manufacturer', () => {
+    component.vehicles = vehicles;
+    component.filterForm.controls.manufacturer.setValue('Tesla');
+    component.findManufacturer();
+    fixture.detectChanges();
+
+    const yearOptionEls = fixture.nativeElement.querySelectorAll('.yearOption');
+
+    expect(component.vehicles.length).toEqual(10, 'Vehicles length');
+    expect(yearOptionEls.length).toEqual(2, 'Model options');
+  });
 });

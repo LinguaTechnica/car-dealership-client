@@ -11,14 +11,14 @@
     <div class="form-group">
       <label for="vehicleModel" class="form-label mt-4">Model:</label>
       <select class="form-select" id="vehicleModel" formControlName="model">
-        <option class="modelOption" *ngFor="let vehicle of results" [ngValue]="vehicle.model">{{ vehicle.model }}</option>
+        <option class="modelOption" *ngFor="let model of getModels()" [ngValue]="model">{{ model }}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="year" class="form-label mt-4">Year:</label>
       <select class="form-select" id="year" formControlName="year">
-        <option class="yearOption" *ngFor="let vehicle of results"  [ngValue]="vehicle.year">{{ vehicle.year }}</option>
+        <option class="yearOption" *ngFor="let year of getYears()"  [ngValue]="year">{{ year }}</option>
       </select>
     </div>
 

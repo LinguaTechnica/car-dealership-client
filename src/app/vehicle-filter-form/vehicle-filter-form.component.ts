@@ -17,15 +17,25 @@ export class VehicleFilterFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.filterForm = this.formBuilder.group({
-      manufacturer: '',
-      model: '',
-      year: ''
+      manufacturer: 'Select',
+      model: 'Select',
+      year: 'Select'
     });
   }
 
   initializeManufacturers(): string[] {
-    const manufacturers = this.vehicles.map(v => v.manufacturer);
+    const manufacturers = this.vehicles.map(vehicle => vehicle.manufacturer);
     return Array.from(new Set(manufacturers));
+  }
+
+  getModels(): string[] {
+    const models = this.results.map(vehicle => vehicle.model);
+    return Array.from(new Set(models));
+  }
+
+  getYears(): number[] {
+    const years = this.results.map(vehicle => vehicle.year);
+    return Array.from(new Set(years));
   }
 
   findManufacturer(): void {
