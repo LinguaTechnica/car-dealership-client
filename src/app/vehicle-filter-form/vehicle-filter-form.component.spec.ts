@@ -62,7 +62,7 @@ describe('VehicleFilterFormComponent', () => {
 
   it('should render unique list of manufacturers', () => {
     component.vehicles = vehicles;
-    component.initializeManufacturers();
+    component.getManufacturers();
     fixture.detectChanges();
 
     const manufacturerOptionsEls = fixture.nativeElement.querySelectorAll('.manufacturerOption');

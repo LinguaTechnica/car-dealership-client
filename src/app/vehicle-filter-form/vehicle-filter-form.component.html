@@ -4,26 +4,28 @@
     <div class="form-group">
       <label for="manufacturer" class="form-label mt-4">Manufacturer:</label>
       <select class="form-select" id="manufacturer" formControlName="manufacturer" (change)="findManufacturer()">
-        <option class="manufacturerOption" *ngFor="let manufacturer of initializeManufacturers()" [ngValue]="manufacturer">{{ manufacturer }}</option>
+        <option selected disabled>Choose...</option>
+        <option class="manufacturerOption" *ngFor="let manufacturer of getManufacturers()" [ngValue]="manufacturer">{{ manufacturer }}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="vehicleModel" class="form-label mt-4">Model:</label>
-      <select class="form-select" id="vehicleModel" formControlName="model">
+      <select class="form-select" id="vehicleModel" formControlName="model" (change)="findModel()">
         <option class="modelOption" *ngFor="let model of getModels()" [ngValue]="model">{{ model }}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="year" class="form-label mt-4">Year:</label>
-      <select class="form-select" id="year" formControlName="year">
+      <select class="form-select" id="year" formControlName="year" (change)="findYear()">
         <option class="yearOption" *ngFor="let year of getYears()"  [ngValue]="year">{{ year }}</option>
       </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group my-2">
       <input type="submit" class="btn btn-primary" value="Filter" />
+      <input type="reset" class="btn btn-primary" value="Reset" (click)="resetForm()" />
     </div>
   </form>
 </div>
