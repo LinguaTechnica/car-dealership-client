@@ -9,6 +9,7 @@ import { VehicleSearchComponent } from './vehicle-search-form/vehicle-search.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { VehicleFilterFormComponent } from './vehicle-filter-form/vehicle-filter-form.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VehicleFilterFormComponent } from './vehicle-filter-form/vehicle-filter
     VehicleDetailComponent,
     VehicleSearchComponent,
     HeaderComponent,
-    VehicleFilterFormComponent
+    VehicleFilterFormComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
