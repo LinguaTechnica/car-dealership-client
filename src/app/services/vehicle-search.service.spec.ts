@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 
 import { VehicleSearchService } from './vehicle-search.service';
 import { Vehicle } from '../models/vehicle';
-import { VehiclesService } from './vehicles.service';
+import {VehiclesService, vehiclesUrl} from './vehicles.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 class MockVehicleService {
@@ -35,13 +35,13 @@ describe('VehicleSearchService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return keyword search results', () => {
+  it('should return manufacturer search results', () => {
+    expect(service.getQueryResults(vehicle.manufacturer)).toContain(vehicle);
+  });
+
+  it('should get all vehicles', () => {
     const expected: Vehicle[] = [vehicle];
-
-    service.getQueryResults(vehicle.manufacturer).subscribe(results => {
-      expect(results).toEqual(expected);
-    });
-
+    expect(service.getAllVehicles()).toEqual(expected);
   });
 });
 

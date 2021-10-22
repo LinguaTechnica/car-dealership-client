@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { VehiclesService } from './vehicles.service';
 import { Vehicle } from '../models/vehicle';
 
@@ -7,10 +7,17 @@ import { Vehicle } from '../models/vehicle';
   providedIn: 'root'
 })
 export class VehicleSearchService {
+  private vehicles: Vehicle[];
 
-  constructor(private vehicleService: VehiclesService) { }
+  constructor(private vehicleService: VehiclesService) {
+    this.vehicleService.getAll().subscribe(data => this.vehicles = data);
+  }
 
-  getQueryResults(query: string): Observable<Vehicle[]> {
-    return this.vehicleService.getAll();
+  getQueryResults(query: string): Vehicle[] {
+    return this.vehicles.filter(vehicle => vehicle.manufacturer === query);
+  }
+
+  getAllVehicles(): Vehicle[] {
+    return this.vehicles;
   }
 }
