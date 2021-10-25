@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiVehicleUrl: '../assets/cars.json'
+  apiVehicleUrl: '../assets/cars.json',
+  apiAuthUrl: 'http://localhost:5000/api/login'
 };
 
 /*
