@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { VehicleFilterFormComponent } from './vehicle-filter-form/vehicle-filter-form.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { NavComponent } from './shared/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
     VehicleSearchComponent,
     HeaderComponent,
     VehicleFilterFormComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
