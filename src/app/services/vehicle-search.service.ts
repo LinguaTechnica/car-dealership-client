@@ -7,7 +7,7 @@ import { Vehicle } from '../models/vehicle';
   providedIn: 'root'
 })
 export class VehicleSearchService {
-  private vehicles: Vehicle[];
+  public vehicles: Vehicle[];
 
   constructor(private vehicleService: VehiclesService) {
     this.vehicleService.getAll().subscribe(data => this.vehicles = data);

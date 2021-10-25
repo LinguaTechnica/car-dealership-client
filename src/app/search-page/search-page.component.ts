@@ -14,6 +14,7 @@ export class SearchPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.vehicles = this.service.getAllVehicles();
+    // this.service.getAllVehicles().subscribe(data => this.vehicles = data);
   }
 
 }

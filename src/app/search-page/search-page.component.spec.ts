@@ -6,6 +6,7 @@ import { Vehicle } from '../models/vehicle';
 import { VehicleListComponent } from '../vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from '../vehicle-detail/vehicle-detail.component';
 import { By } from '@angular/platform-browser';
+import { Observable, of } from 'rxjs';
 
 class MockVehicleSearchService {
   vehicles = [createVehicle()];

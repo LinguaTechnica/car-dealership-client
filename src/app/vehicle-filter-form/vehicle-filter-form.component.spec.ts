@@ -21,6 +21,7 @@ describe('VehicleFilterFormComponent', () => {
     fixture = TestBed.createComponent(VehicleFilterFormComponent);
     component = fixture.componentInstance;
     component.vehicles = vehicles;
+    component.results = vehicles;
     fixture.detectChanges();
   }));
 

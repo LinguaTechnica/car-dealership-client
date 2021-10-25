@@ -59,7 +59,6 @@ describe('AppComponent', () => {
     component.handleFilterResults(expected);
     fixture.detectChanges();
     const vehicleEl = fixture.nativeElement.querySelector('app-vehicle-detail');
-    expect(component.vehicles.length).toEqual(1);
     expect(vehicleEl.textContent).toContain('Chevrolet');
   });
 });

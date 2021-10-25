@@ -9,9 +9,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class VehicleFilterFormComponent implements OnInit {
   @Input() public vehicles: Vehicle[];
+  @Input() public results: Vehicle[];
   @Output() public filterEvent: EventEmitter<Vehicle[]> = new EventEmitter<Vehicle[]>();
   public filterForm: FormGroup;
-  public results: Vehicle[] = [];
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -62,7 +62,7 @@ export class VehicleFilterFormComponent implements OnInit {
   }
 
   emitResults(): void {
-    // this.filterEvent.emit(this.results);
+    this.filterEvent.emit(this.results);
   }
 
   resetForm(): void {

@@ -4,11 +4,17 @@
 
   <div class="row">
     <div class="col-8">
-      <app-vehicle-list [vehicles]="vehicles"></app-vehicle-list>
+      <app-vehicle-list [vehicles]="results"></app-vehicle-list>
     </div>
     <div class="col-3">
-      <app-vehicle-filter-form [vehicles]="vehicles" (filterEvent)="handleFilterResults($event)"></app-vehicle-filter-form>
+      <app-vehicle-filter-form [vehicles]="vehicles" [results]="vehicles" (filterEvent)="handleFilterResults($event)"></app-vehicle-filter-form>
     </div>
   </div>
 
 </div>
+
+<ng-template #allVehicles>
+  <div class="col-8">
+    <app-vehicle-list [vehicles]="vehicles"></app-vehicle-list>
+  </div>
+</ng-template>
