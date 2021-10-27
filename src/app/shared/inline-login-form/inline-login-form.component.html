@@ -1,0 +1,6 @@
+<form [formGroup]="loginForm" class="d-flex" (ngSubmit)="login()">
+  <input class="form-control me-sm-2" type="text" id="username" formControlName="username" placeholder="Username">
+  <input class="form-control me-sm-2" type="password" formControlName="password" placeholder="Password">
+  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+  <div id="message" *ngIf="loginForm.invalid">{{ message }}</div>
+</form>

@@ -23,11 +23,14 @@
         </li>
 
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Username">
-        <input class="form-control me-sm-2" type="password" placeholder="Password">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
-      </form>
+      <div *ngIf="!showLogin(); else welcome">
+        <app-inline-login-form></app-inline-login-form>
+      </div>
+
     </div>
   </div>
 </nav>
+
+<ng-template #welcome>
+  <div class="text-white">Welcome {{ user.username }}!</div>
+</ng-template>
